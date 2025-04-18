@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Beautiful Page</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-title {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .header-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .content {
+            display: flex;
+            margin: 2rem 0;
+            gap: 2rem;
+        }
+        
+        .main {
+            flex: 3;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        
+        .sidebar {
+            flex: 1;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        
+        .section-title {
+            color: #6e8efb;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+        
+        
+        
+        .footer {
+            text-align: center;
+            padding: 1.5rem;
+            background: #333;
+            color: white;
+            border-radius: 10px 10px 0 0;
+        }
+        
+        .tag {
+            display: inline-block;
+            background: #e0e0e0;
+            padding: 0.3rem 0.6rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .image-container {
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+        
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+            
+        }
+        .image-container:hover img {
+            transform: scale(1.05);
+            filter: brightness(1.05);
+        }
+        
+        
+        
+        
+        .image-title {
+            margin-top: 0.5rem;
+            font-style: italic;
+            color: #666;
+        }
+        
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1.5rem 0;
+            background-color: #6e8efb;
+        }
+        
+        .gallery-item {
+            flex: 1 1 200px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="header-title">Janswand</div>
+            <div class="header-subtitle">"AAP SE,AAPKE LIYE,AAPKE BICH KI BAAT!"</div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="content">
+            <div class="main">
+                <h2 class="section-title">HEADLINES</h2>
+                <p>Rahul gandhi visits Begusarai ,Bihar</p>
+                
+               
+                    <p>Tejashwi challenges Amit Shah to ‘face-to-face talk’ with facts</p>
+               
+                
+                <p>Two communities throw stones at each other in Bihar’s Darbhanga</p>
+                
+                <h2 class="section-title">SPORTS NEWS</h2>
+                <p>Ranji Trophy 2024-25: Salman Nizar’s gritty century rescues Kerala from Bihar’s claws</p>
+            </div>
+            
+            <div class="sidebar">
+                <h2 class="section-title">MENU</h2>
+                <p>SELECT WHICH SECTION YOU WANT TO READ</p>
+                
+                <div>
+                    <span class="tag">POLITICS</span>
+                    <span class="tag">SPORTS</span>
+                    <span class="tag">FINANCE</span>
+                    <span class="tag">BUSINESS</span>
+                    <span class="tag ">ADVERTISEMENT</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="gallery">
+        <div class="gallery-item">
+            <div class="image-container">
+                <img src="BUSINESS.jpg" alt="Gallery image 1">
+                <div class="image-title">BUSINESS NEWS</div>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <div class="image-container">
+                <img src="FINANCE.jpg" alt="Gallery image 2">
+                <div class="image-title">FINANCE NEWS</div>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <div class="image-container">
+                <img src="images.jpg" alt="Gallery image 3">
+                <div class="image-title">SPORTS NEWS</div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+    <div class="footer">
+        <div class="container">
+            <p>© 2023 Simple Beautiful Page. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

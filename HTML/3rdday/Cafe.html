@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .header {
+            background-color: rgb(232, 220, 204);
+            width: 100%;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+
+        }
+
+        .logo {
+            padding-top: 25px;
+            font-size: 30px;
+            margin-left: 10px;
+
+        }
+
+        .menu {
+            margin-left: 20%;
+            margin-top: 3%;
+
+        }
+
+        .menu a {
+            margin: 40px;
+            font-size: 20px;
+            color: rgb(16, 15, 15);
+            text-decoration: none;
+        }
+
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 500px;
+
+        }
+
+        .hero img {
+            width: 100%;
+            height: 100%;
+
+        }
+
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.4);
+            padding: 20px 30px;
+            border-radius: 10px;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .hero-text h1 {
+            font-size: 32px;
+        }
+
+        .hero-butt {
+            width: 100px;
+            height: 50px;
+
+            gap: 20px;
+            justify-content: center;
+
+            margin: 40px;
+            position: absolute;
+            bottom: 2%;
+            left: 45%;
+            display: flex
+        }
+
+        .hero-butt a {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #f2ebeb;
+            color: #0c0c0b;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+
+        }
+
+        .food {
+            display: flex;
+
+        }
+
+        .text {
+            background-color: #fdfafa;
+            padding-left: 5%;
+        }
+
+        .text h3 {
+            font-size: 120px;
+            padding-top: 20%;
+        }
+
+        .text h5 {
+            font-size: 45px;
+        }
+
+        .text p {
+            font-size: 30px;
+        }
+
+        .image {
+            padding: 3%;
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+
+        }
+
+        .hii {
+            display: flex;
+        }
+
+        .colour {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .texting h3 {
+            font-size: 120px;
+            padding-left: 8%;
+        }
+
+        .texting h5 {
+            font-size: 45px;
+            padding-left: 8%;
+        }
+
+        .texting p {
+            font-size: 30px;
+            padding-left: 8%;
+        }
+
+        .loc {
+
+            max-width: 100%;
+            height: 90%;
+            background-color: rgb(232, 220, 204);
+        }
+
+        .add h3 {
+            text-align: center;
+            font-size: 50px;
+            font-family: 'Courier New', Courier, monospace;
+            padding-left: 20%;
+            padding-top: 2%;
+        }
+
+        < !-- .open {
+            display: flex;
+            padding-left: 30%;
+            padding-top: 3%;
+
+        }
+
+        -->.here {
+            text-align: center;
+            font-size: 30px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .time {
+            margin-left: 20%;
+            font-size: 30px;
+
+        }
+
+        .eating {
+
+            display: flex;
+        }
+
+        .eating img {
+            width: 25%;
+            aspect-ratio: 4/3;
+            object-fit: fill;
+
+        }
+
+        .choose {
+            display: flex;
+            background-color: #f2ebeb;
+        }
+
+        .ambi {
+            width: 90%;
+        }
+
+        .reservation-form {
+            margin: 5%;
+            background: rgb(233, 217, 175);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+
+        }
+
+        .reservation-form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            height: 80px;
+        }
+
+        .form-group button {
+            width: 100%;
+            padding: 12px;
+            background-color: #8B4513;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .form-group button:hover {
+            background-color: #A0522D;
+        }
+
+        .bolo {
+
+            width: 100%;
+            font-size: 60px;
+            text-align: center;
+            padding-left: 10%;
+
+
+        }
+
+        .loc h4 {
+            padding-left: 5%;
+            font-size: 70px;
+        }
+
+        .do p {
+            padding-left: 45%;
+            padding-top: 1%;
+            font-size: 40px;
+        }
+
+        .social-icons img {
+            width: 50px;
+        }
+
+        .footer {
+            background-color: #3d2e24;
+            color: #f5f0e6;
+            padding: 40px 20px 10px;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .footer-container>div {
+            flex: 1 1 220px;
+            margin: 10px;
+        }
+
+        .footer h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #fdd9a0;
+        }
+
+        .footer p,
+        .footer ul li a {
+            font-size: 16px;
+            color: #f5f0e6;
+            text-decoration: none;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer ul li a:hover {
+            color: #fdd9a0;
+        }
+
+        .footer-social .icon {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .footer-social .icon:hover {
+            transform: scale(1.2);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #6e5747;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo">47<sup>th</sup>CAFE</div>
+        <div class="menu">
+            <a href="About.html">This Is Us</a>
+            <a href="menu.html">Menu</a>
+            <a href="online.html">Order Online</a>
+            <a href="contact.html">Contact Us</a>
+
+        </div>
+    </div>
+    <div class="hero">
+
+        <img src="/HTML/3rdday/Coffee.avif" alt="">
+        <div class="hero-text">
+            <p>Cafe & Restaurant Est. 2035</p>
+            <h1>Your Go-to Spot for Delicious Eats & Coffee</h1>
+
+        </div>
+        <div class="hero-butt">
+            <a href="online.html">ORDER ONLINE</a>
+            <a href="menu.html">OUR MENU</a>
+        </div>
+
+        <div class="food">
+
+            <div class="text">
+
+                <h3> Eat.</h3>
+                <h5> Breakfast, Lunch and Artisanal Pastries</h5>
+                <p>
+                    come and devour into it.
+                </p>
+            </div>
+            <div class="image">
+                <img src="/HTML/3rdday/Bread.avif" alt="">
+            </div>
+
+        </div>
+        <div class="hii">
+
+            <div class="colour">
+                <img src="/HTML/3rdday/Drink.avif" alt="">
+            </div>
+            <div class="texting">
+
+                <h3> Drink.</h3>
+                <h5>The Freshest Cup in Town </h5>
+                <p>
+                    come and devour into it.
+                </p>
+            </div>
+        </div>
+        <div class="food">
+
+            <div class="text">
+
+                <h3> Enjoy.</h3>
+                <h5>Make Yourself at Home</h5>
+                <p>
+                    come and devour into it.
+                </p>
+            </div>
+            <div class="image">
+                <img src="/HTML/3rdday/Enjoy.avif" alt="">
+            </div>
+
+        </div>
+
+        <div class="eating">
+            <img src="/HTML/3rdday/burger.jpg" alt="">
+            <!-- <img src="/HTML/3rdday/download.jpg" alt=""> -->
+            <img src="/HTML/3rdday/chicken.jpg" alt="">
+            <img src="/HTML/3rdday/cake.jpg" alt="">
+            <img src="/HTML/3rdday/ice-cream.jpg" alt="">
+        </div>
+        <div class="bolo">
+            <h3>RESERVATION AREA</h3>
+
+        </div>
+        <div class="choose">
+
+            <!-- <h3>RESERVATION AREA</h3> -->
+            <div class="ambi">
+                <img src="/HTML/3rdday/AMBIANCE.png" alt="">
+            </div>
+            <form class="reservation-form">
+
+                <h2>Reserve a Table</h2>
+
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="e.g. +1234567890" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="guests">Number of Guests</label>
+                    <select id="guests" name="guests" required>
+                        <option value="">Select</option>
+                        <option value="1">1 Person</option>
+                        <option value="2">2 People</option>
+                        <option value="3">3 People</option>
+                        <option value="4">4 People</option>
+                        <option value="5+">5 or more</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Reservation Date</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="time">Reservation Time</label>
+                    <input type="time" id="time" name="time" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Special Requests</label>
+                    <textarea id="message" name="message" placeholder="Any special instructions?"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit">Book Now</button>
+                </div>
+            </form>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <h3>About Us</h3>
+                    <p>47<sup>th</sup> CAFE is your cozy corner for soulful brews, delicious bites, and calm vibes right
+                        in the heart of Patna.</p>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="">Reservation</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="Contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h3>Contact</h3>
+                    <p>Boring Road, Patna, Bihar</p>
+                    <p>Email: info@47thcafe.com</p>
+                    <p>Phone: +91 98765 43210</p>
+                </div>
+
+                <div class="footer-social">
+                    <h3>Follow Us</h3>
+                    <a href="https://www.instagram.com/cafe" target="_blank">
+                        <img src="/HTML/3rdday/instagram.svg" alt="Instagram" class="icon">
+                    </a>
+                    <a href="https://www.youtube.com/cafe" target="_blank">
+                        <img src="/HTML/3rdday/youTube.svg" alt="YouTube" class="icon">
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 47<sup>th</sup> CAFE. All Rights Reserved.</p>
+            </div>
+        </footer>
+
+
+
+    </div>
+    </div>
+
+</body>
+
+</html>
